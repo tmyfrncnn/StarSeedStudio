@@ -19,7 +19,8 @@
 
 /* font */
 p, div {
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,7 +34,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: black;
+    background-color: #121111;
     margin: 0px;
     color: #FFFFFF;
     display:flex;
@@ -97,7 +98,7 @@ header {
     min-height: 500px;
     height: 100vh;
     width: 100%;
-    background-image:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("assets/hero-img.png");
+    background-image:linear-gradient(180deg, rgba(18,17,17,0) 0%, rgba(18,17,17,1) 100%), url("assets/hero-img.png");
     background-size: cover;
     align-items: center;
     display: flex;
@@ -109,11 +110,11 @@ header {
 
 .foreground-image {
     position: absolute;
-    top: 100px;
+    top: 115px;
 }
 
 .foreground-image img {
-    height: 70vh;
+    height: 65vh;
 }
 
 .v-line-separator {
@@ -123,7 +124,7 @@ header {
 }
 
 .negative-margin-top {
-    margin-top: -55px;
+    margin-top: -90px;
     z-index: 2;
 }
 
@@ -136,29 +137,29 @@ header {
 }
 
 .about h1 {
-    padding-top: 16%;
+    padding-top: 15%;
 }
 
 .vector-img1 {
     position: absolute;
-    top: 0;
+    top: -10px;
     /* left: -280px; */
     /* left: -30%; */
     left: -95px;
-    height: 200px;
+    height: 220px;
 }
 
 .vector-img2 {
     position: absolute;
-    left: 95%;
-    height: 250px;
-    top: 75%;
+    left: 90%;
+    height: 230px;
+    top: 82%;
 }
 
 .work-line-1 {
     border-top: solid 1px white;
     border-bottom: solid 1px white;
-    margin-top: 13%
+    margin-top: 12%
 }
 
 .work-line-1 h2 {
@@ -168,3 +169,63 @@ header {
 section {
     width: 80vw;
 }
+
+.workTab {
+    overflow: hidden;
+    background-color: #121111;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .workTab button {
+    background-color: inherit;
+    float: left;
+    border: solid 1px white;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2s;
+    font-size: 20px;
+    border-radius: 25px;
+    color: white
+  }
+  
+  .workTab button:hover {
+    background-color: #FFFFFF;
+    color: #121111;
+  }
+  
+  .workTab button.active {
+    background-color: #FFFFFF;
+    color: #121111;
+  }
+  
+    .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-top: 30px;
+  }
+
+  .image1 {
+    width: 20%;
+    height: 20%
+  }
+
+  .image2 {
+    width: 20%;
+    height: 20%
+  }
+
+  .image3 {
+    width: 20%;
+    height: 20%
+  }
+
+  .image4 {
+    width: 20%;
+    height: 20%
+  }

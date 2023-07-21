@@ -75,4 +75,54 @@
         <h2>Works🎨</h2>
     </section>
 
+    <section class="workTab">
+        <button class="tablinks" onclick="openCategory(event, 'ProductPhotography')">Product Photography</button>
+        <button class="tablinks" onclick="openCategory(event, 'BrandIdentity')">Brand Identity</button>
+        <button class="tablinks" onclick="openCategory(event, 'ProductDesign')">Product Design</button>
+        <button class="tablinks" onclick="openCategory(event, 'EventsAndActivities')">Events and Activities</button>
+    </section>
+
+    <div id="ProductPhotography" class="container">
+            <img class="image1" src="assets/img2.png">
+            <img class="image2" src="assets/img3.png">
+            <img class="image3" src="assets/img4.png">
+            <img class="image4" src="assets/img1.png">
+    </div>
+      
+      <div id="BrandIdentity" class="container">
+        <img class="image4" src="assets/img1.png">
+        <img class="image3" src="assets/img4.png">
+        <img class="image1" src="assets/img2.png">
+        <img class="image2" src="assets/img3.png">
+      </div>
+      
+      <section id="ProductDesign" class="container">
+        <img class="image1" src="assets/img2.png">
+        <img class="image4" src="assets/img1.png">
+        <img class="image2" src="assets/img3.png">
+        <img class="image3" src="assets/img4.png">
+      </section>
+      
+      <section id="EventsAndActivities" class="container">
+        <img class="image3" src="assets/img4.png">
+        <img class="image2" src="assets/img3.png">
+        <img class="image1" src="assets/img2.png">
+        <img class="image4" src="assets/img1.png">
+      </section>
+
+      <script>
+        function openCategory(evt, categoryName) {
+          var i, container, tablinks;
+          container = document.getElementsByClassName("container");
+          for (i = 0; i < container.length; i++) {
+            container[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(categoryName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
 </body>
