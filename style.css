@@ -1,3 +1,33 @@
+/* colors */
+.purple {
+    color: #C64D9C;
+}
+
+.green {
+    color: #74C044;
+}
+
+.blue{
+    color: #67CADA;
+}
+
+.yellow {
+    color: #EAE71F;
+}
+
+/* colors */
+
+/* font */
+p, div {
+    font-size: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 40px;
+}
+/* font */
+
+
 body {
     font-family: Lato;
     background-repeat: no-repeat;
@@ -9,6 +39,12 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* After section main, get all section siblings and apply style */
+section.main ~ section {
+    /* margin-left: 90px; */
+    /* margin-right: 90px; */
 }
 
 header {
@@ -24,6 +60,7 @@ header {
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 .nav ul {
@@ -45,7 +82,9 @@ header {
     color: #FFFFFF;
 
 }
-
+.slogan {
+    text-align: center;
+}
 .logo {
     height: 75px;
 }
@@ -86,4 +125,46 @@ header {
 .negative-margin-top {
     margin-top: -55px;
     z-index: 2;
+}
+
+.p2 {
+    font-weight: 100;
+}
+
+.about {
+    position: relative;
+}
+
+.about h1 {
+    padding-top: 16%;
+}
+
+.vector-img1 {
+    position: absolute;
+    top: 0;
+    /* left: -280px; */
+    /* left: -30%; */
+    left: -95px;
+    height: 200px;
+}
+
+.vector-img2 {
+    position: absolute;
+    left: 95%;
+    height: 250px;
+    top: 75%;
+}
+
+.work-line-1 {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    margin-top: 13%
+}
+
+.work-line-1 h2 {
+    /* margin-left: 90px; */
+}
+
+section {
+    width: 80vw;
 }
