@@ -15,6 +15,10 @@
     color: #EAE71F;
 }
 
+.orange {
+    color: #FB810B
+}
+
 /* colors */
 
 /* font */
@@ -62,6 +66,7 @@ header {
     align-items: center;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: 500;
 }
 
 .nav ul {
@@ -162,10 +167,6 @@ header {
     margin-top: 12%
 }
 
-.work-line-1 h2 {
-    /* margin-left: 90px; */
-}
-
 section {
     width: 80vw;
 }
@@ -235,3 +236,160 @@ section {
     border-bottom: solid 1px white;
     margin-top: 12%
 }
+
+.callToAction {
+    text-align:left;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 30px;
+}
+
+.vector-img3 {
+    position: relative;
+    height: 120px;
+    left: -130px;
+    top: -165px;
+}
+
+.vector-img4 {
+    position: relative;
+    height: 120px;
+    left: 845px;
+    top: -65px;
+}
+
+.vector-img5 {
+    position: relative;
+    height: 93px;
+    left: -208px;
+    top: 283px;
+}
+
+.vector-img6 {
+    position: relative;
+    height: 40px;
+    left: 206px;
+    top: 288px;
+}
+
+.vector-img7 {
+    position: relative;
+    height: 126px;
+    left: 906px;
+    top: 306px;
+}
+
+.form {
+    position: relative;
+    left: 320px;
+    margin-top: -90px;
+    max-width: 500px;
+    font-family: Lato;
+    padding-bottom: 15px;
+  }
+  
+  input[type=text] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #121111;
+    border-bottom: solid 1px white;
+    color: #FFFFFF;
+  }
+  
+  input[type=text]:focus {
+    background-color: #121111;
+    outline: none;
+    color: #FFFFFF;
+  }
+  
+  #myBtn {
+    background-color: #121111;
+    color: white;
+    padding: 16px 20px;
+    border: solid 2px white;
+    cursor: pointer;
+    width: 95%;
+    opacity: 0.9;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  
+  #myBtn:hover {
+    background-color: #FFFFFF;
+    color: #121111;
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    margin-top: 10%;
+    margin-left: 30%;
+    padding: 20px;
+    width: 40%;
+    background-color: #121111;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: solid 1px white;
+  }
+  
+  .modal-message {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .close {
+    color: #FFFFFF;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #EAE71F;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .Contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 110px;
+    max-width: 75%;
+  }
+
+  .scrollUp {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #121111;
+    color: white;
+    padding-left: 138px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: solid 1px white;
+    font-size: 15px;
+    font-weight: 500;
+  }

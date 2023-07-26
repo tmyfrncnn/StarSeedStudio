@@ -114,6 +114,61 @@
         <h2>Reach to Us 🤙🏼</h2>
     </section>
 
+    <section>
+        <p class="callToAction">We see your unstoppable drive and ambition. <br>Ready to achieve something extraordinary?
+
+            <br><br><b>Let's chat! ✨</b></p>
+
+            <img class="vector-img3" src="assets/img11.png" alt="vector-img3">
+
+            <img class="vector-img4" src="assets/img13.png" alt="vector-img4">
+
+            <img class="vector-img5" src="assets/img12.png" alt="vector-img5">
+
+            <img class="vector-img6" src="assets/img15.png" alt="vector-img6">
+
+            <img class="vector-img7" src="assets/img14.png" alt="vector-img7">
+
+            <div class="form">
+          <input type="text" placeholder="Full Name" name="name" required>
+      
+          <input type="text" placeholder="Email Address" name="email" required>
+
+          <input type="text" placeholder="Message" name="message" required>
+      
+          <button id="myBtn">Submit</button>
+      
+      <div id="myModal" class="modal">
+      
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="modal-message">Your schedule has been booked! ⭐</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Contact">
+        <div class="line1">
+            <b>Come over and say hello!</b>
+        </div>
+        <div class="line2">
+            <span class="yellow">Instagram</span>
+                <br>@starseedstudio
+        </div>
+        <div class="line3">
+            <p><span class="orange">Facebook</span>
+            <br>/starseedstudio</p>
+        </div>
+    </section>
+
+    <div class="scrollUp">
+        Back to Top ⬆️
+    </div>
+
+    <div class="footer">
+        2023 | Star Seed Studios™️
+    </div>
+
       <script>
         function openCategory(evt, categoryName) {
           var i, container, tablinks;
@@ -127,6 +182,26 @@
           }
           document.getElementById(categoryName).style.display = "block";
           evt.currentTarget.className += " active";
+        }
+
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+ 
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
         }
         </script>
 </body>
