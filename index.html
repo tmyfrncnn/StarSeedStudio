@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Star Seed Studio</title>
-  <link href="style.css" rel="stylesheet">
+    <title>Star Seed Studio</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,26 +14,26 @@
             </a>
             <ul>
                 <li>
-                    <a href="">About Us</a>
+                    <a href="#AboutUs">About Us</a>
                 </li>
                 <li>
-                    <a href="">Works</a>
+                    <a href="#Works">Works</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#ContactUs">Contact Us</a>
                 </li>
                 <li>
-                    <a href="">Our Team</a>
+                    <a href="ourTeam.html">Our Team</a>
                 </li>
             </ul>
         </div>
     </header>
 
-    <section class="main">    
+    <section class="main" id="Home">
         <div class="foreground-image">
             <img src="assets/star seed studio logo.png" alt="Star Seed Studio">
         </div>
-        
+
         <!-- <div class="v-line">
         </div> -->
     </section>
@@ -43,7 +43,7 @@
 
     <section class="slogan">
         <p>
-           Redefining the world of
+            Redefining the world of
             <b><em>design,</em></b>
             <span class="purple">
                 one
@@ -63,88 +63,92 @@
 
     <section class="about">
         <img class="vector-img1" src="assets/img9.png" alt="vector-img1">
-        <h1>A vibrant design studio where imagination meets<br>professionalism.</h1>
-        
-        <p class="p2"> A team of talented creatives who specialize in crafting 📝 captivating visual<br> experiences for our clients. With a touch of whimsy 🦄 and a dash of<br>innovation, we bring your wildest ideas to life.
+        <h1 id="AboutUs">A vibrant design studio where imagination meets<br>professionalism.</h1>
+
+        <p class="p2"> A team of talented creatives who specialize in crafting 📝 captivating visual<br> experiences for
+            our clients. With a touch of whimsy 🦄 and a dash of<br>innovation, we bring your wildest ideas to life.
         </p>
 
         <img class="vector-img2" src="assets/img10.png" alt="vector-img2">
     </section>
 
     <section class="work-line-1">
-        <h2>Works🎨</h2>
+        <h2 id="Works">Works🎨</h2>
     </section>
 
     <section class="workTab">
-        <button class="tablinks" onclick="openCategory(event, 'ProductPhotography')">Product Photography</button>
-        <button class="tablinks" onclick="openCategory(event, 'BrandIdentity')">Brand Identity</button>
-        <button class="tablinks" onclick="openCategory(event, 'ProductDesign')">Product Design</button>
-        <button class="tablinks" onclick="openCategory(event, 'EventsAndActivities')">Events and Activities</button>
+        <button id="tab1" class="tablinks active" onclick="openCategory(event, 'ProductPhotography')">Product Photography</button>
+        <button id="tab2" class="tablinks" onclick="openCategory(event, 'BrandIdentity')">Brand Identity</button>
+        <button id="tab3" class="tablinks" onclick="openCategory(event, 'ProductDesign')">Product Design</button>
+        <button id="tab4" class="tablinks" onclick="openCategory(event, 'EventsAndActivities')">Events and Activities</button>
     </section>
 
-    <div id="ProductPhotography" class="container">
+    <div>
+        <div id="ProductPhotography" class="container">
             <img class="image1" src="assets/img2.png">
             <img class="image2" src="assets/img3.png">
             <img class="image3" src="assets/img4.png">
             <img class="image4" src="assets/img1.png">
+        </div>
+    
+        <div id="BrandIdentity" class="container">
+            <img class="image4" src="assets/img1.png">
+            <img class="image3" src="assets/img4.png">
+            <img class="image1" src="assets/img2.png">
+            <img class="image2" src="assets/img3.png">
+        </div>
+    
+        <div id="ProductDesign" class="container">
+            <img class="image1" src="assets/img2.png">
+            <img class="image4" src="assets/img1.png">
+            <img class="image2" src="assets/img3.png">
+            <img class="image3" src="assets/img4.png">
+        </div>
+    
+        <div id="EventsAndActivities" class="container">
+            <img class="image3" src="assets/img4.png">
+            <img class="image2" src="assets/img3.png">
+            <img class="image1" src="assets/img2.png">
+            <img class="image4" src="assets/img1.png">
+        </div>
     </div>
-      
-      <div id="BrandIdentity" class="container">
-        <img class="image4" src="assets/img1.png">
-        <img class="image3" src="assets/img4.png">
-        <img class="image1" src="assets/img2.png">
-        <img class="image2" src="assets/img3.png">
-      </div>
-      
-      <section id="ProductDesign" class="container">
-        <img class="image1" src="assets/img2.png">
-        <img class="image4" src="assets/img1.png">
-        <img class="image2" src="assets/img3.png">
-        <img class="image3" src="assets/img4.png">
-      </section>
-      
-      <section id="EventsAndActivities" class="container">
-        <img class="image3" src="assets/img4.png">
-        <img class="image2" src="assets/img3.png">
-        <img class="image1" src="assets/img2.png">
-        <img class="image4" src="assets/img1.png">
-      </section>
 
-      <section class="work-line-2">
+    <section class="work-line-2">
         <h2>Reach to Us 🤙🏼</h2>
     </section>
 
-    <section>
-        <p class="callToAction">We see your unstoppable drive and ambition. <br>Ready to achieve something extraordinary?
+    <section class="contact-section">
+        <p class="callToAction" id="ContactUs">We see your unstoppable drive and ambition. <br>Ready to achieve
+            something extraordinary?
 
             <br><br><b>Let's chat! ✨</b></p>
 
-            <img class="vector-img3" src="assets/img11.png" alt="vector-img3">
+        <img class="vector-img3" src="assets/img11.png" alt="vector-img3">
 
-            <img class="vector-img4" src="assets/img13.png" alt="vector-img4">
+        <img class="vector-img4" src="assets/img13.png" alt="vector-img4">
 
-            <img class="vector-img5" src="assets/img12.png" alt="vector-img5">
+        <img class="vector-img5" src="assets/img12.png" alt="vector-img5">
 
-            <img class="vector-img6" src="assets/img15.png" alt="vector-img6">
+        <img class="vector-img6" src="assets/img15.png" alt="vector-img6">
 
-            <img class="vector-img7" src="assets/img14.png" alt="vector-img7">
+        <img class="vector-img7" src="assets/img14.png" alt="vector-img7">
 
-            <div class="form">
-          <input type="text" placeholder="Full Name" name="name" required>
-      
-          <input type="text" placeholder="Email Address" name="email" required>
+        <div class="form">
+            <input type="text" placeholder="Full Name" name="name" required>
 
-          <input type="text" placeholder="Message" name="message" required>
-      
-          <button id="myBtn">Submit</button>
-      
-      <div id="myModal" class="modal">
-      
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p class="modal-message">Your schedule has been booked! ⭐</p>
-        </div>
-      </div>
+            <input type="text" placeholder="Email Address" name="email" required>
+
+            <input type="text" placeholder="Message" name="message" required>
+
+            <button id="myBtn">Submit</button>
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="modal-message">Your schedule has been booked! ⭐</p>
+                </div>
+            </div>
     </section>
 
     <section class="Contact">
@@ -153,55 +157,21 @@
         </div>
         <div class="line2">
             <span class="yellow">Instagram</span>
-                <br>@starseedstudio
+            <br>@starseedstudio
         </div>
         <div class="line3">
-            <p><span class="orange">Facebook</span>
-            <br>/starseedstudio</p>
+            <span class="orange">Facebook</span>
+            <br>/starseedstudio
         </div>
     </section>
 
     <div class="scrollUp">
-        Back to Top ⬆️
+        <a href="#Home"><span class="Up1">Back to Top ⬆️</span></a>
     </div>
 
     <div class="footer">
         2023 | Star Seed Studios™️
     </div>
 
-      <script>
-        function openCategory(evt, categoryName) {
-          var i, container, tablinks;
-          container = document.getElementsByClassName("container");
-          for (i = 0; i < container.length; i++) {
-            container[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(categoryName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-
-        var modal = document.getElementById("myModal");
-
-        var btn = document.getElementById("myBtn");
-
-        var span = document.getElementsByClassName("close")[0];
- 
-        btn.onclick = function() {
-        modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-        modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-        if (event.target == modal) {
-        modal.style.display = "none";
-        }
-        }
-        </script>
+    <script src="./index.js"></script>
 </body>
