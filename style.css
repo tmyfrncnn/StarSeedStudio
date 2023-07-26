@@ -229,3 +229,9 @@ section {
     width: 20%;
     height: 20%
   }
+  
+  .work-line-2 {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    margin-top: 12%
+}
