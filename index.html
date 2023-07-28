@@ -78,10 +78,12 @@
     </section>
 
     <section class="workTab">
-        <button id="tab1" class="tablinks active" onclick="openCategory(event, 'ProductPhotography')">Product Photography</button>
+        <button id="tab1" class="tablinks active" onclick="openCategory(event, 'ProductPhotography')">Product
+            Photography</button>
         <button id="tab2" class="tablinks" onclick="openCategory(event, 'BrandIdentity')">Brand Identity</button>
         <button id="tab3" class="tablinks" onclick="openCategory(event, 'ProductDesign')">Product Design</button>
-        <button id="tab4" class="tablinks" onclick="openCategory(event, 'EventsAndActivities')">Events and Activities</button>
+        <button id="tab4" class="tablinks" onclick="openCategory(event, 'EventsAndActivities')">Events and
+            Activities</button>
     </section>
 
     <div>
@@ -91,21 +93,21 @@
             <img class="image3" src="assets/img4.png">
             <img class="image4" src="assets/img1.png">
         </div>
-    
+
         <div id="BrandIdentity" class="container">
             <img class="image4" src="assets/img1.png">
             <img class="image3" src="assets/img4.png">
             <img class="image1" src="assets/img2.png">
             <img class="image2" src="assets/img3.png">
         </div>
-    
+
         <div id="ProductDesign" class="container">
             <img class="image1" src="assets/img2.png">
             <img class="image4" src="assets/img1.png">
             <img class="image2" src="assets/img3.png">
             <img class="image3" src="assets/img4.png">
         </div>
-    
+
         <div id="EventsAndActivities" class="container">
             <img class="image3" src="assets/img4.png">
             <img class="image2" src="assets/img3.png">
@@ -174,5 +176,48 @@
         2023 | Star Seed Studios™️
     </div>
 
+    <script>
+        function openCategory(evt, categoryName) {
+            var container
+            var tablinks
+
+            // Creates an array of elements with the class "container"
+            container = document.getElementsByClassName("container");
+
+            // For loop
+            for (var i = 0; i < container.length; i++) {
+                container[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(categoryName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <script src="./index.js"></script>
 </body>

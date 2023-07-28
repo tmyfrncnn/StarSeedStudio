@@ -488,7 +488,6 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;    
   align-items: center;
-  max-height: 400px;
   gap: 20px
 }
 
