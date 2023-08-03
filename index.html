@@ -34,9 +34,6 @@
         <div class="foreground-image">
             <img src="assets/star seed studio logo.png" alt="Star Seed Studio">
         </div>
-
-        <!-- <div class="v-line">
-        </div> -->
     </section>
 
     <div class="v-line-separator negative-margin-top">
@@ -88,24 +85,20 @@
 
     <div>
         <div id="ProductPhotography" class="container">
-            <img class="prod_photo" src="assets/prod_photo2.png">
+            <img class="prod_photo workPortfolio"src="assets/prod_photo2.png">
         </div>
 
         <div id="BrandIdentity" class="container">
-            <img class="brand_identity" src="assets/brand_identity2.png">
+            <img class="brand_identity workPortfolio" src="assets/brand_identity2.png">
         </div>
 
         <div id="ProductDesign" class="container">
-            <img class="prod_des" src="assets/prod_des2.png">
+            <img class="prod_des workPortfolio" src="assets/prod_des2.png">
         </div>
 
         <div id="EventsAndActivities" class="container">
-            <img class="event" src="assets/event_2.png">
+            <img class="event workPortfolio" src="assets/event_2.png">
         </div>
-
-        <div id="work-img-modal" class="imgModal"></div>
-        <span class="closeBtn">&times;</span>
-        <img class="work-modal-content" id="workImg">
     </div>
 
     <section class="work-line-2">
@@ -135,19 +128,12 @@
 
             <input type="text" placeholder="Message" name="message" required>
 
-            <button id="myBtn">Submit</button>
+            <button id="formButton">Submit</button>
 
-            <div id="myModal" class="modal">
-
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p class="modal-message">Your schedule has been booked! ⭐</p>
-                </div>
-            </div>
-    </section>
-
-    <section class="Contact">
-        <div class="line1">
+        </section>
+        
+        <section class="Contact">
+            <div class="line1">
             <b>Come over and say hello!</b>
         </div>
         <div class="line2">
@@ -168,6 +154,18 @@
         2023 | Star Seed Studio™️
     </div>
 
+    <div id="portfolioModal" class="modal">
+        <span class="close">&times;</span>
+        <img src="" alt="" id="portfolioImg">
+    </div>
+
+    <div id="formModal" class="modal">
+
+        <div class="modal-content modal-message-box">
+            <span class="close" id="closeFormBtn">&times;</span>
+            <p class="modal-message">Your schedule has been booked! ⭐</p>
+        </div>
+    </div>
     <script>
         function openCategory(evt, categoryName) {
             var container
@@ -191,44 +189,54 @@
             evt.currentTarget.className += " active";
         }
 
-        // Get the modal
-            var imgModal = document.getElementById("work-img-modal");
+        // make a script specifically for formModal ID
+        const modals = document.querySelectorAll('.modal')
+        var formModal = document.getElementById("formModal");
+        var formButton = document.getElementById("formButton");
+        let isModalOn = false
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById("ProductPhotography");
-            var imgModal = document.getElementById("workImg");
-            img.onclick = function(){
-            imgModal.style.display = "block";
-            imgModal.src = this.src;
+        function toggleOverflow() {
+            if (isModalOn === false) {
+                document.body.style.overflow = "auto"
+            } else {
+                document.body.style.overflow = "hidden"
             }
 
-        // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("closeBtn")[0];
-
-        // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-            imgModal.style.display = "none";
+            console.log("Is modal on is:", isModalOn)
+            console.log("Document overflow is:", document.body.style.overflow)
         }
 
-            var modal = document.getElementById("myModal");
+        const closeModal = document.querySelectorAll(".close");
 
-            var btn = document.getElementById("myBtn");
-
-            var span = document.getElementsByClassName("close")[0];
-
-            btn.onclick = function () {
-            modal.style.display = "block";
+        closeModal.forEach(item => {
+            item.addEventListener('click', () => {
+                modals.forEach(modal => {
+                    modal.style.display = "none";
+                    isModalOn = false
+                    toggleOverflow()
+                })
+            })
+        })
+        formButton.onclick = function () {
+            formModal.style.display = "block";
+            isModalOn = true
+            toggleOverflow()
         }
 
-            span.onclick = function () {
-            modal.style.display = "none";
-        }
+        const workPortfolios = document.querySelectorAll('.workPortfolio')
+        const workPortfolioImg = document.querySelector('#portfolioModal img')
+        workPortfolios.forEach(item => {
+            item.addEventListener('click', () => {
+                let imageSrc = item.src
+                workPortfolioImg.src = imageSrc
 
-            window.onclick = function (event) {
-            if (event.target == modal) {
-                imgModal.style.display = "none";
-            }
-        }
+                // show modal
+                document.querySelector('#portfolioModal').style.display = 'block'
+
+                isModalOn = true
+                toggleOverflow()
+            })
+        })
     </script>
     <script src="./index.js"></script>
 </body>

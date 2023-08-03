@@ -250,47 +250,34 @@ div div.container:not(:first-of-type) {
 .brand_identity {
   width: 35%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brand_identity:hover {
+  opacity: 0.7;
 }
 
 .prod_des {
   width: 35%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prod_des:hover {
+  opacity: 0.7;
 }
 
 .event {
   width: 35%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.imgModal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
-}
-
-.work-modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.work-modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+.event:hover {
+  opacity: 0.7;
 }
 
 .closeBtn {
@@ -398,7 +385,7 @@ input[type=text]:focus {
   color: #FFFFFF;
 }
 
-#myBtn {
+#formButton {
   background-color: #121111;
   color: white;
   padding: 16px 20px;
@@ -415,8 +402,16 @@ input[type=text]:focus {
   color: #121111;
 }
 
-.modal {
+#formModal, #portfolioModal {
   display: none;
+  text-align: center;
+}
+
+#portfolioImg {
+  width: 80vw;
+}
+
+.modal {
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -430,6 +425,13 @@ input[type=text]:focus {
 }
 
 .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-message-box {
   margin-top: 10%;
   margin-left: 30%;
   padding: 20px;
@@ -447,9 +449,18 @@ input[type=text]:focus {
 
 .close {
   color: #FFFFFF;
+  font-size: 28px;
+  font-weight: bold;
+  top: 1vw;
+  position: fixed;
+  right: 3vw;
+}
+
+#closeFormBtn {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: unset;
 }
 
 .close:hover,
@@ -517,13 +528,15 @@ input[type=text]:focus {
 .Team {
   border-top: solid 1px white;
   border-bottom: solid 1px white;
-  margin-top: 9%
+  margin-top: 9%;
+  width: 100%;
+  text-align: center;
 }
-
+/* 
 .teamContent {
   padding-left: 28vw;
   padding-right: 28vw;
-}
+} */
 
 .teamMembers {
   display: flex;
