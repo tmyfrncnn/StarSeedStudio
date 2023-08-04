@@ -15,11 +15,53 @@
         top: 40%;
     }
 }
-@keyframes rotate1 {
+@keyframes rotate-counterclockwise {
     from {
         transform: rotate(0);
     }
     to {
         transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle-x {
+    to {
+        background-position: -60px 60px;
+    }
+}
+
+@keyframes diamond-1 {
+    from {
+        top: 99.5%;
+    }
+    to {
+        top: 103%;
+    }
+}
+
+@keyframes diamond-2 {
+    from {
+        top: 104.8%;
+    }
+    to {
+        top: 109.3%;
+    }
+}
+
+@keyframes diamond-main {
+    from {
+        top: 102.5%;
+    }
+    to {
+        top: 107%;
     }
 }

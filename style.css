@@ -166,20 +166,106 @@ header {
   padding-top: 15%;
 }
 
-.vector-img1 {
+div#circle-x {
+  height: 160px;
+  width: 160px;
+  background: url('./assets/background-images/x.png') repeat;
+  border-radius: 100%;
+  background-size: 15px 15px;
+  animation: circle-x 4s linear infinite;
+  position: absolute;
+  top: 21px;
+  left: -54px;
+}
+
+div#circle-broken {
+  height: 126px;
+  width: 126px;
+  background: url('./assets/background-images/circle-broken.png');
+  background-size: contain;
+  animation: rotate-clockwise 60s linear infinite;
+  position: absolute;
+  top: 15px;
+  left: -95px;
+}
+
+/* .vector-img1 {
   position: absolute;
   top: -10px;
-  /* left: -280px; */
-  /* left: -30%; */
   left: -95px;
   height: 220px;
-}
+} */
 
 .vector-img2 {
   position: absolute;
   left: 90%;
   height: 230px;
   top: 82%;
+}
+
+div.box {
+  width: 75px;
+  height: 75px;
+  border: 3px solid #FFD303;
+  left: 92%;
+  position: absolute;
+}
+
+
+div.diamond {
+  left: 92%;
+  rotate: 45deg;
+}
+
+div.diamond-1 {
+  animation: diamond-1 3s infinite alternate ease-in-out;
+}
+
+div.diamond-2 {
+  animation: diamond-2 3s infinite alternate ease-in-out;
+  animation-delay: 800ms;
+}
+
+div.diamond-main {    
+  background-color: #B40481;
+  border-width: 0;
+  left: 92.2% !important;
+  animation: diamond-main 3s infinite alternate ease-in-out;
+  animation-delay: 300ms;
+}
+
+div.smallbox {
+  top: 82%;
+  margin-left: 67px;
+  height: 13px;
+  width: 13px;
+  border-width: 1px;
+}
+
+div.smallbox-1 {
+  top: 82%;
+  border-color: #EE3E4D;
+  animation: rotate-counterclockwise 20s infinite linear;
+}
+
+div.smallbox-2 {
+  margin-top: 23px;
+  animation: rotate-counterclockwise 20s infinite linear;
+  animation-delay: 300ms;
+}
+
+div.smallbox-3 {
+  margin-top: 46px;
+  border-color: #B40481;
+  animation: rotate-counterclockwise 20s infinite linear;
+  animation-delay: 100ms;
+}
+
+div.smallbox-4 {
+  margin-top: 69px;
+  border-color: #9ABF1A;
+  animation: rotate-counterclockwise 20s infinite linear;
+  animation-delay: 500ms;
 }
 
 .work-line-1 {
@@ -324,7 +410,7 @@ div div.container:not(:first-of-type) {
   top: 35%;
   right: 10%;
   animation:
-    rotate1 100s infinite linear,
+    rotate-counterclockwise 100s infinite linear,
     bobUpDown2 10s infinite alternate ease-in-out;
 }
 
@@ -532,11 +618,6 @@ input[type=text]:focus {
   width: 100%;
   text-align: center;
 }
-/* 
-.teamContent {
-  padding-left: 28vw;
-  padding-right: 28vw;
-} */
 
 .teamMembers {
   display: flex;
