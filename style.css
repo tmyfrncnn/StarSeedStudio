@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import "animations.css";
 html {
   scroll-behavior: smooth;
 }
@@ -503,18 +503,4 @@ input[type=text]:focus {
   margin-right: 100px;
   margin-bottom: 40px;
   font-size: 19px;
-}
-
-/* KEYFRAMES */
-@keyframes bobUpDown1 {
-  from {bottom: -21%;}
-  to {bottom: -25%;}
-}
-@keyframes bobUpDown2 {
-  from {top: 35%;}
-  to {top: 40%;}
-}
-@keyframes rotate1 {
-  from {transform: rotate(0);}
-  to {transform: rotate(-360deg);}
 }

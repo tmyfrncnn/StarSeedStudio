@@ -1,0 +1,25 @@
+/* KEYFRAMES */
+@keyframes bobUpDown1 {
+    from {
+        bottom: -21%;
+    }
+    to {
+        bottom: -25%;
+    }
+}
+@keyframes bobUpDown2 {
+    from {
+        top: 35%;
+    }
+    to {
+        top: 40%;
+    }
+}
+@keyframes rotate1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
