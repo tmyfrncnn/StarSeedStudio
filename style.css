@@ -236,24 +236,65 @@ div div.container:not(:first-of-type) {
   display: none;
 }
 
-.image1 {
-  width: 20%;
-  height: 20%
+.prod_photo {
+  width: 35%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.image2 {
-  width: 20%;
-  height: 20%
+.prod_photo:hover {
+  opacity: 0.7;
 }
 
-.image3 {
-  width: 20%;
-  height: 20%
+.brand_identity {
+  width: 35%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.image4 {
-  width: 20%;
-  height: 20%
+.brand_identity:hover {
+  opacity: 0.7;
+}
+
+.prod_des {
+  width: 35%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prod_des:hover {
+  opacity: 0.7;
+}
+
+.event {
+  width: 35%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.event:hover {
+  opacity: 0.7;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .work-line-2 {
@@ -344,7 +385,7 @@ input[type=text]:focus {
   color: #FFFFFF;
 }
 
-#myBtn {
+#formButton {
   background-color: #121111;
   color: white;
   padding: 16px 20px;
@@ -361,8 +402,16 @@ input[type=text]:focus {
   color: #121111;
 }
 
-.modal {
+#formModal, #portfolioModal {
   display: none;
+  text-align: center;
+}
+
+#portfolioImg {
+  width: 80vw;
+}
+
+.modal {
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -376,6 +425,13 @@ input[type=text]:focus {
 }
 
 .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-message-box {
   margin-top: 10%;
   margin-left: 30%;
   padding: 20px;
@@ -393,9 +449,18 @@ input[type=text]:focus {
 
 .close {
   color: #FFFFFF;
+  font-size: 28px;
+  font-weight: bold;
+  top: 1vw;
+  position: fixed;
+  right: 3vw;
+}
+
+#closeFormBtn {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: unset;
 }
 
 .close:hover,
@@ -463,13 +528,15 @@ input[type=text]:focus {
 .Team {
   border-top: solid 1px white;
   border-bottom: solid 1px white;
-  margin-top: 9%
+  margin-top: 9%;
+  width: 100%;
+  text-align: center;
 }
-
+/* 
 .teamContent {
   padding-left: 28vw;
   padding-right: 28vw;
-}
+} */
 
 .teamMembers {
   display: flex;

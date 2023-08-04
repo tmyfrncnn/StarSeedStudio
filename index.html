@@ -34,9 +34,6 @@
         <div class="foreground-image">
             <img src="assets/star seed studio logo.png" alt="Star Seed Studio">
         </div>
-
-        <!-- <div class="v-line">
-        </div> -->
     </section>
 
     <div class="v-line-separator negative-margin-top">
@@ -88,31 +85,19 @@
 
     <div>
         <div id="ProductPhotography" class="container">
-            <img class="image1" src="assets/img2.png">
-            <img class="image2" src="assets/img3.png">
-            <img class="image3" src="assets/img4.png">
-            <img class="image4" src="assets/img1.png">
+            <img class="prod_photo workPortfolio"src="assets/prod_photo2.png">
         </div>
 
         <div id="BrandIdentity" class="container">
-            <img class="image4" src="assets/img1.png">
-            <img class="image3" src="assets/img4.png">
-            <img class="image1" src="assets/img2.png">
-            <img class="image2" src="assets/img3.png">
+            <img class="brand_identity workPortfolio" src="assets/brand_identity2.png">
         </div>
 
         <div id="ProductDesign" class="container">
-            <img class="image1" src="assets/img2.png">
-            <img class="image4" src="assets/img1.png">
-            <img class="image2" src="assets/img3.png">
-            <img class="image3" src="assets/img4.png">
+            <img class="prod_des workPortfolio" src="assets/prod_des2.png">
         </div>
 
         <div id="EventsAndActivities" class="container">
-            <img class="image3" src="assets/img4.png">
-            <img class="image2" src="assets/img3.png">
-            <img class="image1" src="assets/img2.png">
-            <img class="image4" src="assets/img1.png">
+            <img class="event workPortfolio" src="assets/event_2.png">
         </div>
     </div>
 
@@ -143,19 +128,12 @@
 
             <input type="text" placeholder="Message" name="message" required>
 
-            <button id="myBtn">Submit</button>
+            <button id="formButton">Submit</button>
 
-            <div id="myModal" class="modal">
-
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p class="modal-message">Your schedule has been booked! ⭐</p>
-                </div>
-            </div>
-    </section>
-
-    <section class="Contact">
-        <div class="line1">
+        </section>
+        
+        <section class="Contact">
+            <div class="line1">
             <b>Come over and say hello!</b>
         </div>
         <div class="line2">
@@ -176,6 +154,18 @@
         2023 | Star Seed Studio™️
     </div>
 
+    <div id="portfolioModal" class="modal">
+        <span class="close">&times;</span>
+        <img src="" alt="" id="portfolioImg">
+    </div>
+
+    <div id="formModal" class="modal">
+
+        <div class="modal-content modal-message-box">
+            <span class="close" id="closeFormBtn">&times;</span>
+            <p class="modal-message">Your schedule has been booked! ⭐</p>
+        </div>
+    </div>
     <script>
         function openCategory(evt, categoryName) {
             var container
@@ -199,25 +189,54 @@
             evt.currentTarget.className += " active";
         }
 
-        var modal = document.getElementById("myModal");
+        // make a script specifically for formModal ID
+        const modals = document.querySelectorAll('.modal')
+        var formModal = document.getElementById("formModal");
+        var formButton = document.getElementById("formButton");
+        let isModalOn = false
 
-        var btn = document.getElementById("myBtn");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        function toggleOverflow() {
+            if (isModalOn === false) {
+                document.body.style.overflow = "auto"
+            } else {
+                document.body.style.overflow = "hidden"
             }
+
+            console.log("Is modal on is:", isModalOn)
+            console.log("Document overflow is:", document.body.style.overflow)
         }
+
+        const closeModal = document.querySelectorAll(".close");
+
+        closeModal.forEach(item => {
+            item.addEventListener('click', () => {
+                modals.forEach(modal => {
+                    modal.style.display = "none";
+                    isModalOn = false
+                    toggleOverflow()
+                })
+            })
+        })
+        formButton.onclick = function () {
+            formModal.style.display = "block";
+            isModalOn = true
+            toggleOverflow()
+        }
+
+        const workPortfolios = document.querySelectorAll('.workPortfolio')
+        const workPortfolioImg = document.querySelector('#portfolioModal img')
+        workPortfolios.forEach(item => {
+            item.addEventListener('click', () => {
+                let imageSrc = item.src
+                workPortfolioImg.src = imageSrc
+
+                // show modal
+                document.querySelector('#portfolioModal').style.display = 'block'
+
+                isModalOn = true
+                toggleOverflow()
+            })
+        })
     </script>
     <script src="./index.js"></script>
 </body>
