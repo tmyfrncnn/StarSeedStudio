@@ -5,23 +5,36 @@
     <title>Star Seed Studio</title>
     <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon gif/01.png" id="favicon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
+        <input type="checkbox" id="hamburger-trigger" name="hamburger-trigger">
+        <label class="lbl-trigger" for="hamburger-trigger">
+            <img src="./assets/svg/hamburger (white).svg" alt="" height="32px"
+            id="hamburger">
+        </label>
+        <div id="cover-screen"></div>
         <div class="nav">
             <a class="home" href="#home">
                 <img class="logo" src="assets/star seed logo.svg">
             </a>
             <ul>
                 <li>
-                    <a href="#AboutUs">About Us</a>
+                    <a href="#AboutUs">
+                        About Us
+                    </a>
                 </li>
                 <li>
-                    <a href="#Works">Works</a>
+                    <a href="#Works">
+                        Works
+                    </a>
                 </li>
                 <li>
-                    <a href="#ContactUs">Contact Us</a>
+                    <a href="#ContactUs">
+                        Contact Us
+                    </a>
                 </li>
                 <li>
                     <a href="ourTeam.html">Our Team</a>
@@ -180,6 +193,15 @@
         </div>
     </div>
     <script>
+        const navLinks = document.querySelectorAll('.nav ul li a')
+
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById("hamburger-trigger").checked = false;
+            })
+        })
+
+
         function openCategory(evt, categoryName) {
             var container
             var tablinks
@@ -228,6 +250,8 @@
                     isModalOn = false
                     toggleOverflow()
                 })
+                
+                document.querySelector('.lbl-trigger').style.display = 'inline-block'
             })
         })
         formButton.onclick = function () {
@@ -247,6 +271,7 @@
                 document.querySelector('#portfolioModal').style.display = 'block'
 
                 isModalOn = true
+                document.querySelector('.lbl-trigger').style.display = 'none'
                 toggleOverflow()
             })
         })

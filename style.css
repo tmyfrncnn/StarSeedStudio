@@ -3,7 +3,10 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* .home {
+  position: unset;
+  margin-top: unset;
+} */
 
 /* colors */
 .purple {
@@ -37,6 +40,7 @@ p,
 div {
   font-size: 35px;
   font-weight: 100;
+  transition: 0.5s;
 }
 
 h1,
@@ -46,6 +50,7 @@ h4,
 h5,
 h6 {
   font-size: 40px;
+  transition: 0.5s;
 }
 
 /* font */
@@ -63,12 +68,6 @@ body {
   align-items: center;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
-}
-
-/* After section main, get all section siblings and apply style */
-section.main~section {
-  /* margin-left: 90px; */
-  /* margin-right: 90px; */
 }
 
 header {
@@ -141,6 +140,7 @@ header {
 
 .foreground-image img {
   height: 65vh;
+  transition: 0.5s;
 }
 
 .v-line-separator {
@@ -288,7 +288,6 @@ section {
 
 .workTab button {
   background-color: inherit;
-  float: left;
   border: solid 1px white;
   outline: none;
   cursor: pointer;
@@ -313,8 +312,6 @@ section {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  padding-left: 90px;
-  padding-right: 90px;
   margin-top: 30px;
 }
 
@@ -410,8 +407,7 @@ div div.container:not(:first-of-type) {
   top: 35%;
   right: 10%;
   animation:
-    rotate-counterclockwise 100s infinite linear,
-    bobUpDown2 10s infinite alternate ease-in-out;
+    rotate-counterclockwise 100s infinite linear;
 }
 
 .vector-img5 {
@@ -624,7 +620,8 @@ input[type=text]:focus {
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
-  margin-left: 35px
+  margin-left: 35px;
+  flex-wrap: wrap;
 }
 
 .teamName {
@@ -636,13 +633,14 @@ input[type=text]:focus {
   display: flex;
   flex-direction: column;    
   align-items: center;
-  gap: 20px
+  gap: 20px;
+  width: 25%;
 }
 
 .team-container img {
   object-fit: contain;
-  height: 65%;
-  width: 65%;
+  height: 50%;
+  width: 50%;
 }
 
 .team-name {
@@ -651,4 +649,164 @@ input[type=text]:focus {
   margin-right: 100px;
   margin-bottom: 40px;
   font-size: 19px;
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburger-trigger {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    top: 0%;
+  }
+
+  .home {
+    margin-top: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .nav {
+    width: 100%;
+    position: fixed;
+    flex-direction: row-reverse
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .lbl-trigger {
+    display: inline-block;
+    right: 0;
+    top: 15px;
+    transform: unset;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .Team {
+    margin-top: 120px;
+  }
+  
+  .teamMembers {
+    flex-direction: column;
+  }
+
+  .team-container {
+    width: unset;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    background: black;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .nav ul li {
+    text-align: right;
+    padding:  20px 0px 20px 0px;
+    border-bottom: 1px white solid;
+  }
+
+  .nav ul li:first-child {
+    margin-top: 30px;
+  }
+
+  .nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger-trigger:checked ~ .nav ul {
+    display: flex;
+  }
+  #hamburger-trigger:checked ~ #cover-screen {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 0;
+    position: absolute;
+  }
+
+  :has(#hamburger-trigger:checked) body > *:not(header)  {
+    filter: blur(0.5rem);
+  }
+
+  :has(#hamburger-trigger:checked) .lbl-trigger {
+    right: 40%;
+    transform: translateX(50px);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+  }
+
+  p, div {
+    font-size: 28px;
+  }
+
+  .foreground-image img {
+    height: 50vh;
+  }
+
+  .workTab button {
+    padding: 11px 13px;
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  .container img {
+    width: 50%;
+  }
+
+  .callToAction {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .Contact {
+    max-width: unset;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .line2{
+    margin-left: unset;
+  }
+
+  .line2, .line3 {
+    text-align: center;
+  }
+
+  div#circle-x {
+    height: 128px;
+    width: 128px;
+    top: -34px;
+  }
+
+  div#circle-broken {
+    height: 101px;
+    width: 101px;
+    top: -40px;
+  }
+
+  .vector-img4 {
+    height: 96px;
+    top: 25%;
+    right: 2%;
+  }
+
+  .vector-img5 {
+    height: 80px;
+    left: -5%;
+    bottom: -22%;
+  }
 }
