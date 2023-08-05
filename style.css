@@ -398,6 +398,49 @@ div div.container:not(:first-of-type) {
   left: -12%;
 }
 
+.arrow {
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  left: -11%;
+  rotate: 45deg;
+}
+
+.arrow-1 {
+  border-color: #FFD303;
+  top: -15px;
+  animation: arrow-1 1.5s infinite alternate ease-in-out;
+}
+
+.arrow-2 {
+  border-color: #B40481;
+  top: 7px;
+  animation: arrow-2 1.5s infinite alternate ease-in-out;
+  animation-delay: 250ms;
+}
+
+.arrow-3 {
+  border-color: #9ABF1A;
+  top: 30px;
+  animation: arrow-3 1.5s infinite alternate ease-in-out;
+  animation-delay: 500ms;
+}
+
+.red-circle {
+  height: 35px;
+  width: 35px;
+  border: solid 4px #D40936;
+  border-radius: 100%;
+  position: absolute;
+  left: -11.5%;
+  top: 78px;
+  animation: red-circle 1.5s infinite alternate ease-in-out;
+  animation-delay: 600ms;
+}
+
 .vector-img4 {
   position: absolute;
   height: 120px;
@@ -795,6 +838,10 @@ input[type=text]:focus {
     top: -40px;
   }
 
+  .vector-img3 {
+    left: -10%
+  }
+
   .vector-img4 {
     height: 96px;
     top: 25%;
@@ -805,5 +852,13 @@ input[type=text]:focus {
     height: 80px;
     left: -5%;
     bottom: -22%;
+  }
+
+  .arrow {
+    left: -10%;
+  }
+
+  .red-circle {
+    left: -11%;
   }
 }

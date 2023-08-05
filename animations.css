@@ -65,3 +65,39 @@
         top: 107%;
     }
 }
+
+@keyframes arrow-1 {
+    from {
+        top: -15px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes arrow-2 {
+    from {
+        top: 7px;
+    }
+    to {
+        top: 22px;
+    }
+}
+
+@keyframes arrow-3 {
+    from {
+        top: 30px;
+    }
+    to {
+        top: 45px;
+    }
+}
+
+@keyframes red-circle {
+    from {
+        top: 78px;
+    }
+    to {
+        top: 93px;
+    }
+}
