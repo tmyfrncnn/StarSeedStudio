@@ -744,7 +744,7 @@ input[type=text]:focus {
   .nav ul {
     display: none;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     background: black;
     height: 100vh;
     z-index: 1;
@@ -781,7 +781,7 @@ input[type=text]:focus {
   }
 
   :has(#hamburger-trigger:checked) .lbl-trigger {
-    right: 40%;
+    right: 50%;
     transform: translateX(50px);
   }
   h1, h2, h3, h4, h5, h6 {
@@ -834,6 +834,7 @@ input[type=text]:focus {
     height: 128px;
     width: 128px;
     top: -34px;
+    z-index: -1;
   }
 
   div#circle-broken {
@@ -848,7 +849,7 @@ input[type=text]:focus {
 
   .vector-img4 {
     height: 96px;
-    top: 25%;
+    top: 17%;
     right: 2%;
   }
 
