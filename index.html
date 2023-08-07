@@ -154,12 +154,18 @@
 
         <div class="form">
             <form action="https://formsubmit.co/732950a06477b81d7f327fa603b59be8" method="POST" >
-                <input type="text" placeholder="Full Name" name="name" required>
-    
-                <input type="text" placeholder="Email Address" name="email" required>
-    
-                <input type="text" placeholder="Message" name="message" required>
-    
+                <div>
+                    <span class="error-msg" id="error-name">Full Name is required</span>
+                    <input type="text" placeholder="Full Name" name="name" required>
+                </div>
+                <div>
+                    <span class="error-msg" id="error-email">Email Address is required</span>
+                    <input type="email" placeholder="Email Address" name="email" required>
+                </div>
+                <div>
+                    <span class="error-msg" id="error-message">Message is required</span>
+                    <input type="text" placeholder="Message" name="message" required>
+                </div>
                 <button id="formButton" type="submit">Submit</button>
             </form>
 
@@ -261,7 +267,44 @@
                 document.querySelector('.lbl-trigger').style.display = 'inline-block'
             })
         })
+
         formButton.onclick = function () {
+            // Get form inputs
+            const inputs = document.querySelectorAll('.form form input')
+            let error = false
+
+            inputs.forEach(function(input) {
+                let inputName = input.getAttribute('name')
+                let errorDisplay = document.querySelector(`#error-${inputName}`)
+                if (!input.value.trim().length) {
+                    errorDisplay.style.display = 'inline'
+                    setTimeout(function() {
+                        errorDisplay.style.display = 'none'
+                    }, 3000)
+                    error = true
+                }
+                
+                if (inputName == 'email' && input.value.length) {
+                    var re = /\S+@\S+\.\S+/;
+                    if (!re.test(input.value)) {
+                        errorDisplay.innerHTML = 'Not a valid email'
+                    }
+                    
+                    errorDisplay.style.display = 'inline'
+
+                    setTimeout(function() {
+                        errorDisplay.style.display = 'none'
+                    }, 3000)
+
+                    error = true
+                }
+            })
+
+            if (error) {
+                // stop function if error is true
+                return
+            }
+
             formModal.style.display = "block";
             isModalOn = true
             toggleOverflow()
