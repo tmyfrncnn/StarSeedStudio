@@ -406,7 +406,7 @@ div div.container:not(:first-of-type) {
   padding: 3px;
   width: 20px;
   height: 20px;
-  left: -11%;
+  left: 0.5%;
   rotate: 45deg;
 }
 
@@ -436,7 +436,7 @@ div div.container:not(:first-of-type) {
   border: solid 4px #D40936;
   border-radius: 100%;
   position: absolute;
-  left: -11.5%;
+  left: 0%;
   top: 78px;
   animation: red-circle 1.5s infinite alternate ease-in-out;
   animation-delay: 600ms;
@@ -857,17 +857,9 @@ input[type=text]:focus {
     left: -5%;
     bottom: -22%;
   }
-
-  .arrow {
-    left: -10%;
-  }
-
-  .red-circle {
-    left: -11%;
-  }
 }
 
-@media only screen and (max-width: 470px) { 
+@media only screen and (max-width: 500px) { 
   div.box {
     width: 30px;
     height: 30px;
