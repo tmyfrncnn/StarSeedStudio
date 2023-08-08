@@ -5,6 +5,21 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #121111;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+}
+
+
 /* colors */
 .purple {
   color: #C64D9C;
@@ -223,7 +238,7 @@ div.diamond-2 {
   top: 104.8%;
 }
 
-div.diamond-main {    
+div.diamond-main {
   background-color: #B40481;
   border-width: 0;
   right: 2.2% !important;
@@ -528,7 +543,8 @@ div.form form input:focus {
   color: #121111;
 }
 
-#formModal, #portfolioModal {
+#formModal,
+#portfolioModal {
   display: none;
   text-align: center;
 }
@@ -618,10 +634,22 @@ div.form form input:focus {
 .line2 {
   font-size: 20px;
   margin-left: 140px;
+  font-weight: 600;
+}
+
+.line2 .line2-1 {
+  font-size: 18px;
+  font-weight: 200;
 }
 
 .line3 {
   font-size: 20px;
+  font-weight: 600;
+}
+
+.line3 .line3-1 {
+  font-size: 18px;
+  font-weight: 200;
 }
 
 .scrollUp {
@@ -660,7 +688,6 @@ div.form form input:focus {
   justify-content: space-around;
   align-items: center;
   margin-top: 40px;
-  margin-left: 35px;
   flex-wrap: wrap;
 }
 
@@ -671,7 +698,7 @@ div.form form input:focus {
 
 .team-container {
   display: flex;
-  flex-direction: column;    
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   width: 25%;
@@ -700,7 +727,7 @@ div.form form input:focus {
 }
 
 .error-msg {
-  color:  red;
+  color: #EF3340;
   font-weight: 500;
   font-size: 15px;
   display: none;
@@ -716,9 +743,10 @@ div.form form div {
 
 @media only screen and (max-width: 800px) {
 
-  html, body {
-    width: auto!important;
-    overflow-x: hidden!important
+  html,
+  body {
+    width: auto !important;
+    overflow-x: hidden !important
   }
 
   header {
@@ -731,6 +759,12 @@ div.form form div {
     left: 0;
     top: 0;
     z-index: 1;
+    opacity: 1;
+  }
+
+  .home .transparent {
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1)
   }
 
   .nav {
@@ -752,14 +786,14 @@ div.form form div {
     z-index: 1;
   }
 
-.form {
-  max-width: 90%;
-}
+  .form {
+    max-width: 90%;
+  }
 
   .Team {
     margin-top: 120px;
   }
-  
+
   .teamMembers {
     flex-direction: column;
   }
@@ -779,7 +813,7 @@ div.form form div {
 
   .nav ul li {
     text-align: right;
-    padding:  20px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
     border-bottom: 1px white solid;
   }
 
@@ -791,10 +825,11 @@ div.form form div {
     border-bottom: none;
   }
 
-  #hamburger-trigger:checked ~ .nav ul {
+  #hamburger-trigger:checked~.nav ul {
     display: flex;
   }
-  #hamburger-trigger:checked ~ #cover-screen {
+
+  #hamburger-trigger:checked~#cover-screen {
     height: 100vh;
     width: 100vw;
     background-color: black;
@@ -803,7 +838,7 @@ div.form form div {
     position: absolute;
   }
 
-  :has(#hamburger-trigger:checked) body > *:not(header)  {
+  :has(#hamburger-trigger:checked) body>*:not(header) {
     filter: blur(0.5rem);
   }
 
@@ -811,11 +846,18 @@ div.form form div {
     right: 50%;
     transform: translateX(50px);
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 32px;
   }
 
-  p, div {
+  p,
+  div {
     font-size: 28px;
   }
 
@@ -833,7 +875,7 @@ div.form form div {
     font-size: 16px;
     margin: 5px;
   }
-  
+
   .container img {
     width: 50%;
   }
@@ -849,11 +891,12 @@ div.form form div {
     gap: 20px;
   }
 
-  .line2{
+  .line2 {
     margin-left: unset;
   }
 
-  .line2, .line3 {
+  .line2,
+  .line3 {
     text-align: center;
   }
 
@@ -875,9 +918,10 @@ div.form form div {
   }
 
   .vector-img4 {
-    height: 96px;
+    height: 75px;
     top: 17%;
     right: 2%;
+    z-index: -1;
   }
 
   .vector-img5 {
@@ -885,9 +929,31 @@ div.form form div {
     left: -5%;
     bottom: -22%;
   }
+
+  .line1 {
+    font-size: 25px;
+  }
+
+  .line2 {
+    font-weight: 600;
+  }
+
+  .line2 .line2-1 {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .line3 {
+    font-weight: 600;
+  }
+
+  .line3 .line3-1 {
+    font-size: 18px;
+    font-weight: 200;
+  }
 }
 
-@media only screen and (max-width: 500px) { 
+@media only screen and (max-width: 500px) {
   .arrow {
     left: 1%;
   }
@@ -896,21 +962,21 @@ div.form form div {
     width: 30px;
     height: 30px;
   }
-  
+
   div.smallbox {
     height: 9px;
     width: 9px;
   }
-  
+
   .main {
     height: unset;
   }
-  
+
   .workTab {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .vector-img4 {
-    height: 50px;
+    height: 40px;
   }
 }
