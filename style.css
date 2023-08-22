@@ -97,6 +97,7 @@ header {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+  /* margin-top: -10px; */
 }
 
 .nav ul {
@@ -596,6 +597,11 @@ div.form form input:focus {
   top: 1vw;
   position: fixed;
   right: 3vw;
+  background-color: RGB(146, 164, 164,0.2);
+  height: 38px;
+  width: 40px;
+  border-radius: 60%;
+
 }
 
 #closeFormBtn {
@@ -610,6 +616,10 @@ div.form form input:focus {
   color: #EAE71F;
   text-decoration: none;
   cursor: pointer;
+  background-color: RGB(146, 164, 164,0.5);
+  height: 38px;
+  width: 40px;
+  border-radius: 60%;
 }
 
 .Contact {
