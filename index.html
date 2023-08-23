@@ -111,19 +111,20 @@
 
     <div>
         <div id="ProductPhotography" class="container">
-            <img class="prod_photo workPortfolio"src="assets/macchiatoUp_cover.png">
+            <img class="prod_photo workPortfolio"src="assets/macchiatoUp_cover.png" modal-pic="assets\macchiatoUp_content.png">
         </div>
 
         <div id="BrandIdentity" class="container">
-            <img class="brand_identity workPortfolio" src="assets/brand_identity2.png">
+            <img class="brand_identity workPortfolio" src="assets/brand_identity2.png" modal-pic="assets\brand_identity3.png">
         </div>
 
         <div id="ProductDesign" class="container">
-            <img class="prod_des workPortfolio" src="assets/prod_des2.png">
+            <img class="prod_des workPortfolio" src="assets/prod_des2.png" modal-pic="assets\prod_des3.png">
         </div>
 
         <div id="EventsAndActivities" class="container">
-            <img class="event workPortfolio" src="assets/event_2.png">
+            <!-- <img class="event workPortfolio" src="assets/event_2.png"> -->
+            <h4>Nothing to show.</h4>
         </div>
     </div>
 
@@ -184,7 +185,7 @@
         <div class="line3">
             <span class="orange">Facebook</span>
             <br><span class="line3-1">
-                /starseedstudio
+                <a href="https://www.facebook.com/starseedstudio97">/starseedstudio97</a>
             </span>
         </div>
     </section>
@@ -318,7 +319,8 @@
         const workPortfolioImg = document.querySelector('#portfolioModal img')
         workPortfolios.forEach(item => {
             item.addEventListener('click', () => {
-                let imageSrc = item.src
+                const modalpic = item.getAttribute('modal-pic')
+                let imageSrc = modalpic
                 workPortfolioImg.src = imageSrc
 
                 // show modal
